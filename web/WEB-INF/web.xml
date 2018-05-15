@@ -4,5 +4,63 @@
            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd"
            version="4.0">
+   <!--对servlet进行web.xml中的配置20180515-->
+    <!--添加该段代码后会导致jsp文件不能通过点击浮动浏览器按钮打开-->
+    <!--通过手动配置如下地址直接输入浏览器地址栏进行访问-->
+    <!--http://localhost:8080/7-3/InvestigationIndex.jsp-->
+
+    <servlet>
+        <servlet-name>SimpleServlet</servlet-name>
+        <servlet-class> S_8_1.NServlet</servlet-class>        
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SimpleServlet</servlet-name>
+        <url-pattern>/SimpleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AddServlet</servlet-name>
+        <servlet-class>S_9_1.AddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddServlet</servlet-name>
+        <url-pattern>/AddServlet</url-pattern>
+    </servlet-mapping>
+    
+    <!--对servlet进行web.xml中的配置20180515-->
+    
+    <!--对过滤器进行配置-->
+    <filter>
+        <!--过滤器名称-->
+        <filter-name>CountFilter</filter-name>
+        <!--过滤器完整类名-->
+        <filter-class>S_9_1.CountFilter</filter-class>
+        <init-param>
+            <!--初始化参数-->
+            <param-name>count</param-name>
+            <param-value>5000</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <!--过滤器名称-->
+        <filter-name>CountFilter</filter-name>
+        <!--过滤器url映射-->
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>CharactorFilter</filter-name>
+        <filter-class>S_9_1.CharactorFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>CharactorFilter</filter-name>
+        <!--匹配服务器所有文件-->
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--对过滤器进行配置-->
 
 </web-app>

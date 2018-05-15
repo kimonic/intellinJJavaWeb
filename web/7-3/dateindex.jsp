@@ -5,6 +5,7 @@
   Time: 16:46
   To change this template use File | Settings | File Templates.
 --%>
+<%--7-3/dateindex.jsp--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -32,7 +33,9 @@
 </head>
 <body>
 <%--scope为application时不会有刷新效果 page才会有--%>
-<jsp:useBean id="date" class="S_7_3.DateBean" scope="page"/>
+<%--原因:calendar.getinstance()方法获取的单一对象是一个固定对象,不会即时刷新时间--%>
+<%--要想获取当前时间,必须使用calendar.getinstance()每次进行重新获取--%>
+<jsp:useBean id="date" class="S_7_3.DateBean" scope="application"/>
 <div align="center">
     <div id="clock">
         <div id="time">

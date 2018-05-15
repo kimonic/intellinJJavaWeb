@@ -8,7 +8,7 @@ public class Convert {
                 sb.append(s).append(",");
             }
             if (sb.length()>0){
-                sb.deleteCharAt(-1);
+                sb.deleteCharAt(sb.length()-1);
             }
         }
         return sb.toString();

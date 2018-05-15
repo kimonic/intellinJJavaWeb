@@ -5,6 +5,10 @@
     <title>Hello IntellinJ</title>
   </head>
   <body>
+  <div align="center">
+      <h1>欢迎光临</h1>
+      <h3>您是本站第<%=application.getAttribute("count")%>位访客</h3>
+  </div>
  <form action="reg.jsp" method="post">
    <table align="center" width="400" height="200" border="0">
      <tr>
