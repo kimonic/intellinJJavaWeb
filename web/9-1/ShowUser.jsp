@@ -22,7 +22,7 @@
     trace.setUser(name);
     session.setAttribute("list", trace);
     list.addUserinfo(trace.getUser());
-    session.setMaxInactiveInterval(5);
+    session.setMaxInactiveInterval(50);
 %>
 <textarea rows="8" cols="20">
 <%
