@@ -10,8 +10,9 @@ import javax.servlet.http.Part;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-
-@WebServlet("/uploadServlet")
+//asyncSupported=true开启异步处理,默认值为false
+//@WebServlet(value = "/uploadServlet",asyncSupported = true)
+@WebServlet(value = "/uploadServlet")
 @MultipartConfig(location = "E:/tmp")
 public class UploadServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;

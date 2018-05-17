@@ -9,22 +9,22 @@
     <!--通过手动配置如下地址直接输入浏览器地址栏进行访问-->
     <!--http://localhost:8080/7-3/InvestigationIndex.jsp-->
 
-    <servlet>
-        <servlet-name>SimpleServlet</servlet-name>
-        <servlet-class> S_8_1.NServlet</servlet-class>        
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>SimpleServlet</servlet-name>
-        <url-pattern>/SimpleServlet</url-pattern>
-    </servlet-mapping>
-    <servlet>
-        <servlet-name>AddServlet</servlet-name>
-        <servlet-class>S_9_1.AddServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>AddServlet</servlet-name>
-        <url-pattern>/AddServlet</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>SimpleServlet</servlet-name>-->
+        <!--<servlet-class> S_8_1.NServlet</servlet-class>        -->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>SimpleServlet</servlet-name>-->
+        <!--<url-pattern>/SimpleServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet>-->
+        <!--<servlet-name>AddServlet</servlet-name>-->
+        <!--<servlet-class>S_9_1.AddServlet</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>AddServlet</servlet-name>-->
+        <!--<url-pattern>/AddServlet</url-pattern>-->
+    <!--</servlet-mapping>-->
     
     <!--对servlet进行web.xml中的配置20180515-->
     
