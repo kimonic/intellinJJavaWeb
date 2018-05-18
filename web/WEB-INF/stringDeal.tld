@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib
+        xmlns="http://java.sun.com/xml/ns/j2ee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+        version="2.0"
+>
+
+
+    <!--<taglib xmlns="http://java.sun.com/xml/ns/j2ee"-->
+            <!--xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+            <!--xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"-->
+            <!--version="2.0">-->
+    <tlib-version>1.0</tlib-version>
+    <uri>/stringDeal</uri>
+    <!--<uri>/stringDeal</uri>-->
+    <!--invalid content was found starting with element 'uri'. -->
+    <!--One of '{"http://java.sun.com/xml/ns/j2ee":short-name}' is expected-->
+    <function>
+        <name>shiftEnter</name>
+        <function-class>S_11_1.StringDeal</function-class>
+        <function-signature>java.lang.String shiftEnter(java.lang.String)</function-signature>
+    </function>
+    <!--此处short-name中的值最好与**:taglib(示例:(<yy:taglib)保持一致-->
+    <!--在jsp页面中似乎不起任何作用,在jsp页面中使用示例如下:-->
+    <!--添加:<%@taglib uri="/stringDeal" prefix="yy"%>&#45;&#45;prifix:yy-->
+    <!--使用:${yy:shiftEnter(param.content)}yy与prifix:的yy保持一致-->
+    <!--与short-name中的不一致也没影响-->
+    <short-name>yy</short-name>
+</taglib>
