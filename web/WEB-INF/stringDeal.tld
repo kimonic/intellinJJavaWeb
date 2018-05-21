@@ -13,6 +13,7 @@
             <!--version="2.0">-->
     <tlib-version>1.0</tlib-version>
     <uri>/stringDeal</uri>
+    <short-name>yy</short-name>
     <!--<uri>/stringDeal</uri>-->
     <!--invalid content was found starting with element 'uri'. -->
     <!--One of '{"http://java.sun.com/xml/ns/j2ee":short-name}' is expected-->
@@ -26,5 +27,4 @@
     <!--添加:<%@taglib uri="/stringDeal" prefix="yy"%>&#45;&#45;prifix:yy-->
     <!--使用:${yy:shiftEnter(param.content)}yy与prifix:的yy保持一致-->
     <!--与short-name中的不一致也没影响-->
-    <short-name>yy</short-name>
 </taglib>
