@@ -9,26 +9,32 @@
 <html>
 <head>
     <title>实时显示公告信息</title>
+    <%--//window.load方法需要单独放到header内才会执行???--%>
+    <script language="JavaScript">
+        window.onload=function () {
+            getInfo();
+            // 按照指定的周期（以毫秒计）来调用函数或计算表达式。
+            window.setInterval("getInfo()","5000");//每隔5s调用一次getinfo()方法
+        }
+    </script>
 </head>
 <body>
-<div style="border: 1px solid;height: 50px;width: 200px;padding: 5px">
-    <marquee behavior="" direction="up" scrollamount="3">
+<div >
+    <marquee style="border: 1px solid;height: 50px;width: 200px;padding: 5px" behavior="" direction="up" scrollamount="3">
         <div id="showinfo"></div>
     </marquee>
 </div>
 <script language="JavaScript" src="AjaxRequest.js"></script>
 <script language="JavaScript">
-    window.onload=function () {
-        getInfo();
-        document.write("执行了");
-        window.setInterval("getInfo()","10");//每隔10s调用一次getinfo()方法
-    }
+    var count=0;
     function onError() {
         alert("您输入的信息有误!");
     }
     
     function getInfo() {
-        var  loader=net.AjaxRequest("getinfo.jsp",onload,onError,"POST");
+        //需要new关键字
+        count++;
+        var  loader=new net.AjaxRequest("getinfo.jsp?count="+count,onload,onError,"POST");
     }
 
     function onload() {

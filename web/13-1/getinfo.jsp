@@ -13,8 +13,9 @@
 </head>
 <body>
 <%
+    int count=Integer.parseInt(request.getParameter("count"));
     for (int i = 1; i <10 ; i++) {
-        out.print("<li>"+"这是第"+i+"条信息</li>");
+        out.print("<li>"+"这是第"+i*count+"条信息</li>");
     }
 %>
 </body>
