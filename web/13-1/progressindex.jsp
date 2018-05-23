@@ -28,17 +28,22 @@
     <script language="JavaScript">
         function deal(form) {
             form.submit();
-            timer=window.setInterval("getProgress()",5000);
+            getProgress();
+            timer=window.setInterval("getProgress()",1000);
         }
         
         
         function deal_p() {
+            //在此处的函数中添加alert();函数可能需要重启服务器才会有效果
             var h=this.req.responseText;
             h=h.replace(/\s/g,"");//去除字符串中的unicode空白字符
+            document.getElementById("progressBar").style.display="block";//显示进度条progressBar
+            //此处的px不能少,否则没效果,直接使用.width时不需要加"px"否则没有效果
+            document.getElementById("imgprogress").width=h*(255/100);//显示完成的进度
+            // document.getElementById("imgprogress").style.width=h*(255/100)+"px";//显示完成的进度,另一种写法
             document.getElementById("progressPercent").style.display="";//显示百分比
             progressPercent.innerHTML=h+"%";
-            document.getElementById("progressBar").style.display="block";//显示进度条
-            document.getElementById("imgprogress").width=h*(255/100);//显示完成的进度
+
         }
         function onError() {
             alert("上传文件出错!");
@@ -60,8 +65,11 @@
     <img src="http://img.zcool.cn/community/01b03a59688086a8012193a3a3c4d5.gif" width="61" height="23" onclick="form1.reset();">
 </form>
 
-<div id="progressbar" class="prog_border" align="left">
-    <img src="" width="0" height="13" id="imgprogress">
-</div>?<span id="progressPercent" style="width: 40px;display: none">0%</span>
+<div id="progressBar" class="prog_border" align="left" >
+    <%--需要设置style后js代码才会生效??--%>
+    <img src="" width="0" height="13" id="imgprogress" style="background: #0080FF" />
+</div><span id="progressPercent" style="width: 40px;display: none">0%</span>
 </body>
+
+
 </html>
