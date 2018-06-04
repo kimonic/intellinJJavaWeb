@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.8">
+<dataSource name="test@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.9">
     <root id="1">
       <ServerVersion>8.0.11</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -25,6 +25,7 @@
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
     <schema id="7" parent="1" name="test">
+      <Current>1</Current>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
     <schema id="8" parent="1" name="world">

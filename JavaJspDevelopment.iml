@@ -36,5 +36,6 @@
     <orderEntry type="library" name="jstl" level="project" />
     <orderEntry type="library" name="standard" level="project" />
     <orderEntry type="library" name="commons-fileupload-1.3.3" level="project" />
+    <orderEntry type="library" name="dom4j-2.1.0" level="project" />
   </component>
 </module>
